@@ -377,7 +377,7 @@ public class DeclarationVisitor extends Visitor {
                     name(that.getIdentifier()), 1000 );
         }
         if ( that.getParameterLists().size()>1 ) {
-            that.addWarning("higher-order methods are not yet supported");
+            //that.addWarning("higher-order methods are not yet supported");
         }
     }
 
@@ -386,7 +386,7 @@ public class DeclarationVisitor extends Visitor {
             that.addError("missing parameter list in functional argument declaration");
         }
         if ( that.getParameterLists().size()>1 ) {
-            that.addWarning("higher-order methods are not yet supported");
+            //that.addWarning("higher-order methods are not yet supported");
         }
     }
 
@@ -396,7 +396,7 @@ public class DeclarationVisitor extends Visitor {
                     name(that.getIdentifier()) );
         }
         if ( that.getParameterLists().size()>1 ) {
-            that.addWarning("higher-order methods are not yet supported");
+            //that.addWarning("higher-order methods are not yet supported");
         }
     }
 
@@ -546,7 +546,7 @@ public class DeclarationVisitor extends Visitor {
         super.visit(that);
         exitScope(o);
         parameterList.getParameters().add(p);
-        that.addWarning("higher order methods are not yet supported");
+        //that.addWarning("higher order methods are not yet supported");
     }
 
     @Override
