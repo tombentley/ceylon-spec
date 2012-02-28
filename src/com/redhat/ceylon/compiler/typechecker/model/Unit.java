@@ -230,6 +230,14 @@ public class Unit {
         return (Interface) getLanguageModuleDeclaration("Callable");
     }
     
+    public Class getAbstractCallableDeclaration() {
+        return (Class) getLanguageModuleDeclaration("AbstractCallable");
+    }
+    
+    public ProducedType getAbstractCallableType(ProducedType returnType) {
+        return com.redhat.ceylon.compiler.typechecker.model.Util.producedType(getAbstractCallableDeclaration(), returnType);
+    }
+    
     public Interface getCastableDeclaration() {
         return (Interface) getLanguageModuleDeclaration("Castable");
     }
